@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnaSayfa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <div class="container">
+        <div class="col-12">
+
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#">EmlakSitesi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Menü öğeleri: solda kalır -->
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link "  href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="daire.html">Kiralık</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    </ul>
+            
+                    <!-- Arama kutusu: sağda kalır -->
+                    <form class="d-flex ms-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ara</button>
+                    </form>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+        </header>
+
+        <main class="container my-4">
+
+            <h2 class="mb-4 text-center">Kiralık Daireler</h2>
+          
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addModal">Kayıt Ekle</button>
+          
+            <table class="table table-striped" id="dairelerTable">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Adres</th>
+                  <th scope="col">Oda Sayısı</th>
+                  <th scope="col">Alan (m²)</th>
+                  <th scope="col">Kira (TL)</th>
+                  <th scope="col">İlan Tarihi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Beşiktaş, İstanbul</td>
+                  <td>3+1</td>
+                  <td>120</td>
+                  <td>18.000</td>
+                  <td>2025-05-20</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Çankaya, Ankara</td>
+                  <td>2+1</td>
+                  <td>95</td>
+                  <td>13.000</td>
+                  <td>2025-05-22</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Konak, İzmir</td>
+                  <td>1+1</td>
+                  <td>70</td>
+                  <td>9.500</td>
+                  <td>2025-05-15</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Nilüfer, Bursa</td>
+                  <td>3+1</td>
+                  <td>130</td>
+                  <td>11.500</td>
+                  <td>2025-05-18</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Odunpazarı, Eskişehir</td>
+                  <td>2+1</td>
+                  <td>85</td>
+                  <td>8.000</td>
+                  <td>2025-05-21</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Karşıyaka, İzmir</td>
+                  <td>2+1</td>
+                  <td>90</td>
+                  <td>10.500</td>
+                  <td>2025-05-25</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Kadıköy, İstanbul</td>
+                  <td>1+1</td>
+                  <td>65</td>
+                  <td>17.000</td>
+                  <td>2025-05-26</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Osmangazi, Bursa</td>
+                  <td>3+1</td>
+                  <td>115</td>
+                  <td>10.000</td>
+                  <td>2025-05-23</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Tepebaşı, Eskişehir</td>
+                  <td>2+1</td>
+                  <td>80</td>
+                  <td>8.500</td>
+                  <td>2025-05-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>Yenimahalle, Ankara</td>
+                  <td>3+1</td>
+                  <td>110</td>
+                  <td>12.000</td>
+                  <td>2025-05-24</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+
+
+        <footer style="text-align: center; padding: 20px; background-color: #dbdde4c5;">
+            <h4> 2025 Tüm hakları saklıdır.</h4>
+        </footer>
+        
+                
+        <!-- Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="addForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Yeni Daire Ekle</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="adres" class="form-label">Adres</label>
+              <input type="text" class="form-control" id="adres" name="adres" required>
+            </div>
+            <div class="mb-3">
+              <label for="oda" class="form-label">Oda Sayısı</label>
+              <input type="text" class="form-control" id="oda" name="oda" required>
+            </div>
+            <div class="mb-3">
+              <label for="alan" class="form-label">Alan (m²)</label>
+              <input type="number" class="form-control" id="alan" name="alan" required>
+            </div>
+            <div class="mb-3">
+              <label for="kira" class="form-label">Kira (TL)</label>
+              <input type="number" class="form-control" id="kira" name="kira" required>
+            </div>
+            <div class="mb-3">
+              <label for="tarih" class="form-label">İlan Tarihi</label>
+              <input type="date" class="form-control" id="tarih" name="tarih" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+                
+            
+        
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        
+            <script>
+                $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+        });
+            </script>
+        <script>
+        $('#kiralikCarousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            items: 4 // Bunu 4 yapacağız
+        });
+        </script>
+        
+        </body>
+        </html>
